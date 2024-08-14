@@ -10,9 +10,9 @@ import SwiftUI
 struct DismissButton: View {
     @Environment(\.dismiss) var dismiss
     
-    private let text: String
+    private let text: LocalizedStringKey
     
-    init(_ text: String = "Cancel") {
+    init(_ text: LocalizedStringKey = "Cancel") {
         self.text = text
     }
     

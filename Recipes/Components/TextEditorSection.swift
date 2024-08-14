@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TextEditorSection: View {
-    private let title: String
+    private let title: LocalizedStringKey
     @Binding private var value: String
     
-    init(_ title: String, value: Binding<String>) {
+    init(_ title: LocalizedStringKey, value: Binding<String>) {
         self.title = title
         self._value = value
     }

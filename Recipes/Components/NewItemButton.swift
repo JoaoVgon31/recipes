@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct NewItemButton: View {
-    private let text: String
+    private let text: LocalizedStringKey
     private let action: () -> Void
     
-    init(_ text: String, action: @escaping () -> Void) {
+    init(_ text: LocalizedStringKey, action: @escaping () -> Void) {
         self.text = text
         self.action = action
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SubmitButton: View {
-    private let text: String
+    private let text: LocalizedStringKey
     private let requiredFields: [Any?]
     private let action: () -> Void
     
@@ -24,7 +24,7 @@ struct SubmitButton: View {
         })
     }
     
-    init(_ text: String = "Add", requiredFields: [Any?] = [], action: @escaping () -> Void) {
+    init(_ text: LocalizedStringKey = "Add", requiredFields: [Any?] = [], action: @escaping () -> Void) {
         self.text = text
         self.requiredFields = requiredFields
         self.action = action

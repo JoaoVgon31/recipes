@@ -31,7 +31,7 @@ struct NavigationLinkSection<Label: View, Destination: View>: View {
 }
 
 extension NavigationLinkSection where Label == Text {
-    init(_ title: String, destination: () -> Destination) {
+    init(_ title: LocalizedStringKey, destination: () -> Destination) {
         self.label = Text(title)
         self.destination = destination()
     }

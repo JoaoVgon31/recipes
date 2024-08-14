@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ListSection: View {
-    private let title: String
+    private let title: LocalizedStringKey
     private let list: [Any?]
     
-    init(_ title: String, list: [Any?]) {
+    init(_ title: LocalizedStringKey, list: [Any?]) {
         self.title = title
         self.list = list
     }
