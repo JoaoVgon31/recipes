@@ -19,6 +19,15 @@ final class Recipe {
     var servings: String
     var notes: String
     
+    var hasDetails: Bool {
+        return ingredients.isEmpty &&
+        allergens.isEmpty &&
+        instructions.isEmpty &&
+        notes.isEmpty &&
+        preparationTime.isEmpty &&
+        servings.isEmpty
+    }
+    
     init() {
         self.id = UUID().uuidString
         self.name = ""

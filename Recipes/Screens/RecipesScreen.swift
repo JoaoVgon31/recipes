@@ -24,6 +24,7 @@ struct RecipesScreen: View {
             }
             ToolbarItemGroup(placement: .bottomBar) {
                 NewRecipeButton()
+                    .accessibilityIdentifier("newRecipeButton")
                 Spacer()
             }
         }

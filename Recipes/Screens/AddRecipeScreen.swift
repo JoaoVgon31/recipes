@@ -23,6 +23,7 @@ struct AddRecipeScreen: View {
     var body: some View {
         Form {
             TextField("Name", text: $recipe.name)
+                .accessibilityIdentifier("nameTextField")
             TextField("Notes", text: $recipe.notes)
             TextField("Preparation time", text: $recipe.preparationTime)
                 .keyboardType(.numberPad)
@@ -47,6 +48,7 @@ struct AddRecipeScreen: View {
                 SubmitButton(requiredFields: [recipe.name]) {
                     addRecipe()
                 }
+                .accessibilityIdentifier("submitRecipeButton")
             }
         }
     }
