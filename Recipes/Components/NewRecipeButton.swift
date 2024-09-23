@@ -18,6 +18,7 @@ struct NewRecipeButton: View {
             NavigationStack {
                 AddRecipeScreen()
             }
+            .accessibilityIdentifier("addRecipeScreen")
         }
     }
 }

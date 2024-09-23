@@ -23,6 +23,7 @@ struct RecipesView: View {
     var body: some View {
         if recipes.isEmpty {
             NoRecipesView()
+                .accessibilityIdentifier("noRecipesView")
         } else {
             ForEach(recipes) { recipe in
                 NavigationLinkSection {
@@ -30,6 +31,7 @@ struct RecipesView: View {
                 } label: {
                     RecipeRowView(recipe: recipe)
                 }
+                .accessibilityIdentifier("recipeItem")
             }
             .onDelete(perform: deleteRecipes)
         }

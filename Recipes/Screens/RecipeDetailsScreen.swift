@@ -11,15 +11,6 @@ struct RecipeDetailsScreen: View {
     @Environment(\.modelContext) private var modelContext
     let recipe: Recipe
     
-    private func isRecipeEmpty(_ recipe: Recipe) -> Bool {
-        return recipe.ingredients.isEmpty &&
-        recipe.allergens.isEmpty &&
-        recipe.instructions.isEmpty &&
-        recipe.notes.isEmpty &&
-        recipe.preparationTime.isEmpty &&
-        recipe.servings.isEmpty
-    }
-    
     private var ingredientsNames: [String] {
         recipe.ingredients.map({ $0.name })
     }
@@ -30,7 +21,7 @@ struct RecipeDetailsScreen: View {
     
     var body: some View {
         List {
-            if isRecipeEmpty(recipe) {
+            if recipe.hasDetails {
                 NoRecipeDetailsView()
             } else {
                 RecipeDetailsCompactSection(recipe: recipe)
