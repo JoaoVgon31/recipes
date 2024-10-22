@@ -39,7 +39,7 @@ struct ListSection: View {
 }
 
 #Preview {
-    @State var list: [String?] = ["Item 1", nil, "Item 2"]
+    @Previewable @State var list: [String?] = ["Item 1", nil, "Item 2"]
     return Form {
         ListSection("Items", list: list)
     }

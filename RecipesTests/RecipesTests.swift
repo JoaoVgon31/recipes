@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Recipes
+@testable import Notecook___Your_Recipes_Book
 import SwiftData
 
 final class RecipesTests: XCTestCase {

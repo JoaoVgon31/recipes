@@ -27,7 +27,7 @@ struct TextEditorSection: View {
 }
 
 #Preview {
-    @State var value: String = ""
+    @Previewable @State var value: String = ""
     return Form {
         TextEditorSection("Title", value: $value)
     }
